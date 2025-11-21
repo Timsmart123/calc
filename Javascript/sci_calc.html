@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sci_calc.css">
+</head>
+<body>
+      <form name="sci-calc">
+       <table class="calculator" cellspacing="0" cellpadding="1">
+         <tr>
+           <td colspan="5">
+            <input id="display" name="display" value="0" size="28" maxlength="25">
+            </td>
+         </tr>
+         <tr>
+           <td><input type="button" class="btnTop" name="btnTop" id="btnC" value="C" onclick="addChar('0', true)"></td>
+           <td><input type="button" class="btnTop" name="btnTop" id="" value="<--"></td>
+           <td><input type="button" class="btnTop" name="btnTop" id="btnEquals" value="=" onclick="handleBasicOperations()"></td>
+           <td><input type="button" class="btnOpps" name="btnOpps" id="btnPi" value="&#960;" onclick="addChar('3.142', true)"></td>
+           <td><input type="button" class="btnMath" name="btnMath" id="btnPercent" value="%"></td>
+         </tr>
+         <tr>
+           <td><input type="button" class="btnNum" name="btnNum" id="btn7" value="7" onclick="addChar('7', false)"></td>
+           <td><input type="button" class="btnNum" name="btnNum" id="btn8" value="8" onclick="addChar('8', false)"></td>
+           <td><input type="button" class="btnNum" name="btnNum" id="btn9" value="9" onclick="addChar('9', false)"></td>
+           <td><input type="button" class="btnOpps" name="btnOpps" id="btnInd" value="x&#94;" onclick="addChar('^', false)"></td>
+           <td><input type="button" class="btnMath" name="btnMath" id="btnDiv" value="/" onclick="addChar('/', false)"></td>
+         <tr>
+           <td><input type="button" class="btnNum" name="btnNum" id="btn4" value="4" onclick="addChar('4', false)"></td>
+           <td><input type="button" class="btnNum" name="btnNum" id="btn5" value="5" onclick="addChar('', false)"></td>
+           <td><input type="button" class="btnNum" name="btnNum" id="btn6" value="6" onclick="addChar('6', false)"></td>
+           <td><input type="button" class="btnOpps" name="btnOpps" id="btn7" value="ln"></td>
+           <td><input type="button" class="btnMath" name="btnMath" id="btn8" value="*" onclick="addChar('*', false)"></td>
+         </tr>
+         <tr>
+           <td><input type="button" class="btnNum" name="btnNum" id="btn1" value="1" onclick="addChar('1', false)"></td>
+           <td><input type="button" class="btnNum" name="btnNum" id="btn2" value="2" onclick="addChar('2', false)"></td>
+           <td><input type="button" class="btnNum" name="btnNum" id="btn3" value="3" onclick="addChar('3', false)"></td>
+           <td><input type="button" class="btnOpps" name="btnOpps" id="btnSqrt" value="&radic;"></td>
+           <td><input type="button" class="btnMath" name="btnMath" id="btnSubtract" value="-" onclick="addChar('-', false)"></td>
+         </tr>
+         <tr>
+           <td><input type="button" class="btnMath" name="btnMath" value="&#177" id="btnPlusMinus"></td>
+           <td><input type="button" class="btnNum" name="btnNum" id="btn0" value="0" onclick="addChar('0', false)"></td>
+           <td><input type="button" class="btnMath" name="btnMath" id="btnDecimal" onclick="addChar('.', false)" value="&#46;"></td>
+           <td><input type="button" class="btnOpps" name="btnOpps" id="btnSquare" value="x&#50;"></td>
+           <td><input type="button" class="btnMath" name="btnMath" id="btnAdd" onclick="addChar('+', false)" value="+"></td>
+         </tr>
+         <tr>
+           <td><input type="button" class="btnMath" name="btnMath" value="(" id="btnLBracket" onclick="addChar('(', false)"></td>
+           <td><input type="button" class="btnMath" name="btnMath" value=")" id="btnRBracket" onclick="addChar(')', false)"></td>
+           <td><input type="button" class="btnMath" name="btnMath" value="cos" id="btnCos" onclick="handleCos()"></td>
+           <td><input type="button" class="btnMath" name="btnMath" value="sin" id="btnSin"></td>
+           <td><input type="button" class="btnMath" name="btnMath" value="tan" id="btnTan"></td>
+        </tr>
+       </table>
+      </form>
+           
+    <script src="sci_calc.js"></script>
+</body>
+</html>
